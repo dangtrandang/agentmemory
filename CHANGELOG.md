@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+### Added (Fork: @dangtrandang)
+
+- **`integrations/roocode-bridge`** — one-way bridge to import Zoo Code (Roo Code fork) task history into agentmemory sessions and observations. Includes incremental import with active-guard, state tracking, dry-run mode, and workspace filtering. Fixes 4 bugs from the original bridge script: wrong `startSession` argument order, wrong `postObserve` body format, extraneous fields in session/start, and a non-existent DELETE endpoint call. See [`integrations/roocode-bridge/README.md`](./integrations/roocode-bridge/README.md) and [`integrations/roocode-bridge/BRIDGE_DESIGN.md`](./integrations/roocode-bridge/BRIDGE_DESIGN.md).
+
 ## [0.9.27] — 2026-06-07
 
 Wave release closing several breaking regressions reported against v0.9.26, plus an agent-scope isolation security fix, an iii version-pin audit fix, and a benchmark scorecard correction. No breaking changes; drop-in upgrade.

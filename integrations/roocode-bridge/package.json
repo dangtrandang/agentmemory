@@ -1,0 +1,38 @@
+{
+  "name": "@agentmemory/roocode-bridge",
+  "version": "1.0.0",
+  "description": "Import Roo Code (Zoo Code) task history into agentmemory — one-way bridge for session replay, search, and analytics.",
+  "type": "module",
+  "bin": {
+    "agentmemory-roocode-bridge": "./bridge.mjs"
+  },
+  "main": "./bridge.mjs",
+  "exports": {
+    ".": "./bridge.mjs"
+  },
+  "files": [
+    "bridge.mjs",
+    "README.md",
+    "BRIDGE_DESIGN.md"
+  ],
+  "keywords": [
+    "agentmemory",
+    "roo-code",
+    "zoo-code",
+    "bridge",
+    "task-history",
+    "import",
+    "migration",
+    "session-replay"
+  ],
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/dangtrandang/agentmemory/tree/main/integrations/roocode-bridge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dangtrandang/agentmemory.git",
+    "directory": "integrations/roocode-bridge"
+  }
+}
