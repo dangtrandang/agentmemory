@@ -2,6 +2,32 @@
   <img src="assets/banner.png" alt="agentmemory — Persistent memory for AI coding agents" width="720" />
 </p>
 
+> **🔱 Đây là fork của [@dangtrandang](https://github.com/dangtrandang)** — thêm integration **Roo Code / Zoo Code Bridge** để import toàn bộ task history vào agentmemory.
+> **Upstream gốc:** [rohitg00/agentmemory](https://github.com/rohitg00/agentmemory) — star & theo dõi tại đó.
+
+---
+
+## 🦘 Zoo Code / Roo Code Bridge *(Fork addition)*
+
+Import toàn bộ task history từ **Zoo Code (Roo Code fork)** vào **agentmemory** — replay, search, và phân tích mọi session từng chạy.
+
+| File | Mô tả |
+|------|-------|
+| [`integrations/roocode-bridge/bridge.mjs`](integrations/roocode-bridge/bridge.mjs) | Bridge script — chạy `node bridge.mjs --dry-run` |
+| [`integrations/roocode-bridge/README.md`](integrations/roocode-bridge/README.md) | Hướng dẫn sử dụng & cấu hình |
+| [`integrations/roocode-bridge/BRIDGE_DESIGN.md`](integrations/roocode-bridge/BRIDGE_DESIGN.md) | Tài liệu kiến trúc, API contracts, data flow |
+
+```bash
+git clone https://github.com/dangtrandang/agentmemory.git
+cd agentmemory/integrations/roocode-bridge
+node bridge.mjs --dry-run    # Preview
+node bridge.mjs              # Import thật
+```
+
+**4 bug API đã fix** so với script gốc: sai thứ tự tham số `startSession`, sai body `postObserve`, thừa field `session/start`, và gọi `DELETE` endpoint không tồn tại. Xem [BRIDGE_DESIGN.md](integrations/roocode-bridge/BRIDGE_DESIGN.md#bug-fixes-từ-phiên-bản-gốc).
+
+---
+
 <p align="center">
   <strong>
     Your coding agent remembers everything. No more re-explaining.
